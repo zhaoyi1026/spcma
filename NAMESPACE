@@ -1,0 +1,6 @@
+import(MASS, Matrix, sandwich, mediation, igraph, genlasso)
+export(spcma, mcma_BK, mcma_PCA, plot_spcma)
+importFrom("mediation", "mediate")
+importFrom("genlasso", "fusedlasso", "fusedlasso1d")
+importFrom("stats", "pchisq", "pnorm", "qnorm", "quantile", "rnorm", "sd", "cov", "var", "coef", "confint", "lm", "p.adjust")
+importFrom("graphics", "abline", "axis", "lines", "par", "plot", "points", "text")
