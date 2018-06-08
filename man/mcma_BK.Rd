@@ -5,11 +5,11 @@
 \description{ This function performs marginal causal mediation analysis under the linear structural equation modeling framework. It assumes the mediators are causally independent.
 }
 \usage{
-mcma_BK(Z, M, Y, sims = 1000, boot = TRUE, boot.ci.type = c("bca", "perc"), 
+mcma_BK(X, M, Y, sims = 1000, boot = TRUE, boot.ci.type = c("bca", "perc"), 
     conf.level = 0.95, p.adj.method = c("BH", "bonferroni", "BY"))
 }
 \arguments{
-  \item{Z}{ a vector of length \eqn{n}, the randomized treatment assignment.
+  \item{X}{ a vector of length \eqn{n}, the randomized treatment assignment.
 }
   \item{M}{ a \eqn{n\times p} data matrix, the mediators.
 }
@@ -34,13 +34,13 @@ where \eqn{\xi_{ij}} and \eqn{\eta_{ij}} are model errors with mean zero and ind
 \value{
     \item{IE}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of the indirect effect for each mediator.}
 
-    \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the effects not explained by the mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
+    \item{DE}{an outcome matrix, this provides the estimate of the direct effects, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
     \item{alpha}{an outcome matrix, the estimate of the treatment effect on each mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
     \item{beta}{an outcome matrix, the estimate of the mediator effect on the outcome with a one-unit increment, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
-    \item{gamma}{an outcome matrix, th estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of \eqn{\gamma_{j}} in the model.}
+    \item{gamma}{an outcome matrix, th estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of \eqn{\gamma_{j}} in the model. For each mediator, this is the effect not explained by the mediator.}
 
     \item{IE.total}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the total indirect effect.}
 }

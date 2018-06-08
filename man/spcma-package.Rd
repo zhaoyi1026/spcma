@@ -12,7 +12,7 @@
 	Package: \tab spcma \cr
 	Type: \tab Package \cr
 	Version: \tab 1.0 \cr
-	Date: \tab 2018-06-04 \cr
+	Date: \tab 2018-06-08 \cr
 	License: \tab GPL (>=2) \cr
 }
 }

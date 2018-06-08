@@ -60,13 +60,13 @@ In order to yield intuitive interpretations, the loading matrix is sparsified ba
   For \code{SPCA}
   \item{IE}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of the indirect effect for each mediator.}
 
-  \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the effects not explained by the mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
+  \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the direct effect, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
   \item{alpha}{an outcome matrix, the estimate of the treatment effect on each mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
   \item{beta}{an outcome matrix, the estimate of the mediator effect on the outcome with a one-unit increment, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
-  \item{gamma}{an outcome matrix, th estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of \eqn{\gamma_{j}} in the model.}
+  \item{gamma}{an outcome matrix, th estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of \eqn{\gamma_{j}} in the model. For each mediator, this is the effect not explained by the mediator.}
 
   \item{IE.total}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the total indirect effect.}
 
