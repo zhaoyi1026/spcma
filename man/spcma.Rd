@@ -47,20 +47,20 @@ spcma(X, M, Y, adaptive = FALSE, var.per = 0.8, n.pc = NULL, D = NULL,
 }
 }
 \details{ Consider the case of multiple mediators, and there is a linear projection of the original mediators \eqn{\tilde{M}^{(j)}=M\phi_{j}}, where \eqn{\Phi=(\phi_{1},\dots,\phi_{p})} is an orthonormal matrix, such that for \eqn{j\neq k},
-  \deqn{M^{(j)}~\perp~M^{(k)}~|~X}.
+  \deqn{\tilde{M}^{(j)}~\perp~\tilde{M}^{(k)}~|~X.}
 We can perform a series of marginal mediation analysis on the new projected mediators, i.e.,
   \deqn{\tilde{M}_{i}^{(j)}=\alpha_{0j}+\alpha_{j}X_{i}+\xi_{ij},}
   \deqn{Y_{i}=\beta_{0j}+\gamma X_{i}+\beta_{j}\tilde{M}_{i}^{(j)}+\eta_{ij},}
 where \eqn{\xi_{ij}} and \eqn{\eta_{ij}} are model errors with mean zero and independent of each other.
 
-In order to yield intuitive interpretations, the loading matrix is sparsified based on a structured lasso penalty. This package considers a special case as the fused lasso. The structure is given in the matrix \eqn{D}.
+In order to yield intuitive interpretations, the loading matrix is sparsified based on a structured lasso penalty. This package considers a special case as the fused lasso. The structure is given in the matrix \eqn{D} (also see \code{\link[genlasso]{fusedlasso}}).
 }
 \value{ When \code{PC.run = TRUE}, two output lists, one for PCA-based analysis (\code{PCA}) and one for sparse PCA-based analysis (\code{SPCA}). The value of \code{PCA} is the same as the outcome in \code{\link[spcma]{mcma_PCA}}.
 
   For \code{SPCA}
   \item{IE}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of the indirect effect for each mediator.}
 
-  \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the direct effect, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
+  \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the direct effect, as well as the \eqn{p}-value, lower and upper bound of the confidence interval.}
 
   \item{alpha}{an outcome matrix, the estimate of the treatment effect on each mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
@@ -75,9 +75,9 @@ In order to yield intuitive interpretations, the loading matrix is sparsified ba
   \item{var.per}{the cumulative proportion of variance explained by the PCs.}
 }
 \references{
-Huang and Pan (2016). \emph{Hypothesis test of mediation effect in causal mediation model with high-dimensional continuous mediators.} Biometrics, 72(2):402-413.
+Huang and Pan (2016). ``Hypothesis test of mediation effect in causal mediation model with high-dimensional continuous mediators''. \emph{Biometrics}, 72(2):402-413.
 
-Zou, Hastie and Tibshirani (2006). \emph{Sparse principal component analysis.} Journal of computational and graphical statistics, 15(2):265-286.
+Zou, Hastie and Tibshirani (2006). ``Sparse principal component analysis''. \emph{Journal of computational and graphical statistics}, 15(2):265-286.
 }
 \author{
 Yi Zhao, Johns Hopkins University, \email{zhaoyi1026@gmail.com};

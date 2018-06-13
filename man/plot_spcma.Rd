@@ -5,11 +5,11 @@
 \description{ This function realizes the visualization of the result of multiple mediation analysis.
 }
 \usage{
-plot_spcma(re, plot.coef = c("alpha", "beta", "IE"), 
+plot_spcma(object, plot.coef = c("alpha", "beta", "IE"), 
   cex.lab = 1, cex.axis = 1, pt.cex = 1, ...)
 }
 \arguments{
-  \item{re}{ \code{mcma_PCA} or \code{mcma_BK} object.
+  \item{object}{ \code{mcma_PCA} or \code{mcma_BK} object.
 }
   \item{plot.coef}{ a character indicating the parameter to be plotted.
 }

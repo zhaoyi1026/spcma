@@ -26,7 +26,7 @@ mcma_BK(X, M, Y, sims = 1000, boot = TRUE, boot.ci.type = c("bca", "perc"),
   \item{p.adj.method}{ a character of the method implemented for multiple testing adjustment. See \code{\link[stats]{p.adjust}}.
 }
 }
-\details{ Consider the case of multiple mediators, when the mediators are causally independent, i.e., given the treatment assignment, the potential outcome of different mediators are conditionally independent, it is equivalent to conduct a seres of marginal mediation analysis on each individual mediators.
+\details{ Consider the case of multiple mediators, when the mediators are causally independent, i.e., given the treatment assignment, the potential outcome of different mediators are conditionally independent, it is equivalent to conduct a series of marginal mediation analysis on each individual mediators.
     \deqn{M_{i}^{(j)}=\alpha_{0j}+\alpha_{j}Z_{i}+\xi_{ij},}
     \deqn{Y_{i}=\beta_{0j}+\gamma_{j} Z_{i}+\beta_{j}M_{i}^{(j)}+\eta_{ij},}
 where \eqn{\xi_{ij}} and \eqn{\eta_{ij}} are model errors with mean zero and independent of each other. See \code{\link[mediation]{mediate}} for details about single mediator analysis.
@@ -34,7 +34,7 @@ where \eqn{\xi_{ij}} and \eqn{\eta_{ij}} are model errors with mean zero and ind
 \value{
     \item{IE}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of the indirect effect for each mediator.}
 
-    \item{DE}{an outcome matrix, this provides the estimate of the direct effects, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
+    \item{DE}{an outcome matrix, this provides the estimate of the direct effects, as well as the \eqn{p}-value, lower and upper bound of the confidence interval.}
 
     \item{alpha}{an outcome matrix, the estimate of the treatment effect on each mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 

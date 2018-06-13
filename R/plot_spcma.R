@@ -1,9 +1,9 @@
 plot_spcma <-
-function(re,plot.coef=c("alpha","beta","IE"),cex.lab=1,cex.axis=1,pt.cex=1,...)
+function(object,plot.coef=c("alpha","beta","IE"),cex.lab=1,cex.axis=1,pt.cex=1,...)
 {
-  plot.idx<-which(names(re)==plot.coef)
+  plot.idx<-which(names(object)==plot.coef)
   
-  out<-as.matrix(re[[plot.idx]][,c(1,3,4)])
+  out<-as.matrix(object[[plot.idx]][,c(1,3,4)])
   colnames(out)<-c("Estimate","LB","UB")
   
   K<-nrow(out)

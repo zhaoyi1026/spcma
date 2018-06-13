@@ -34,16 +34,16 @@ mcma_PCA(X, M, Y, adaptive = FALSE, var.per = 0.8, n.pc = NULL, boot = TRUE,
 }
 }
 \details{ Consider the case of multiple mediators, and there is a linear projection of the original mediators \eqn{\tilde{M}^{(j)}=M\phi_{j}}, where \eqn{\Phi=(\phi_{1},\dots,\phi_{p})} is an orthonormal matrix, such that for \eqn{j\neq k},
-  \deqn{M^{(j)}~\perp~M^{(k)}~|~X}.
+  \deqn{\tilde{M}^{(j)}~\perp~\tilde{M}^{(k)}~|~X.}
 We can perform a series of marginal mediation analysis on the new projected mediators, i.e.,
   \deqn{\tilde{M}_{i}^{(j)}=\alpha_{0j}+\alpha_{j}X_{i}+\xi_{ij},}
-  \deqn{Y_{i}=\beta_{0j}+\gamma X_{i}+\beta_{j}\tilde{M}_{i}^{(j)}+\eta_{ij},}
+  \deqn{Y_{i}=\beta_{0j}+\gamma_{j}X_{i}+\beta_{j}\tilde{M}_{i}^{(j)}+\eta_{ij},}
 where \eqn{\xi_{ij}} and \eqn{\eta_{ij}} are model errors with mean zero and independent of each other.
 }
 \value{
   \item{IE}{an outcome matrix, the estimate, \eqn{p}-value, lower and upper bound of the confidence interval, and the adjusted \eqn{p}-value of the indirect effect for each mediator.}
 
-  \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the direct effect, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
+  \item{DE}{an outcome matrix, for each mediator, this provides the estimate of the direct effect, as well as the \eqn{p}-value, lower and upper bound of the confidence interval.}
 
   \item{alpha}{an outcome matrix, the estimate of the treatment effect on each mediator, as well as the \eqn{p}-value, lower and upper bound of the confidence interval and the adjusted \eqn{p}-value.}
 
@@ -57,7 +57,7 @@ where \eqn{\xi_{ij}} and \eqn{\eta_{ij}} are model errors with mean zero and ind
 
   \item{var.per}{the cumulative proportion of variance explained by the PCs.}
 }
-\references{ Huang and Pan (2016). \emph{Hypothesis test of mediation effect in causal mediation model with high-dimensional continuous mediators.} Biometrics, 72(2):402-413.
+\references{ Huang and Pan (2016). ``Hypothesis test of mediation effect in causal mediation model with high-dimensional continuous mediators''. \emph{Biometrics}, 72(2):402-413.
 }
 \author{
 Yi Zhao, Johns Hopkins University, \email{zhaoyi1026@gmail.com};
