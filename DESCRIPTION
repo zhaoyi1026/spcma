@@ -2,11 +2,11 @@ Package: spcma
 Type: Package
 Title: Sparse Principal Component based High-Dimensional Mediation Analysis
 Version: 1.0
-Date: 2018-06-08
+Date: 2018-06-19
 Author: Yi Zhao <zhaoyi1026@gmail.com>
 		Martin A. Lindquist <mal2053@gmail.com>
 		Brian S. Caffo <bcaffo@gmail.com>
 Maintainer: Yi Zhao <zhaoyi1026@gmail.com>
-Description: Performs Sparse Principal Component based Mediation Analysis (spcma). 
+Description: Performs Sparse Principal Component based Mediation Analysis (spcma). See Zhao, Y., Lindquist, M. A., & Caffo, B. S. (2018), Sparse Principal Component Based High-Dimensional Mediation Analysis, <arXiv:1806.06118> for details.
 Depends: MASS, Matrix, sandwich, mediation, igraph, genlasso
 License: GPL (>=2)

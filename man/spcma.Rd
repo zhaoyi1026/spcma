@@ -75,6 +75,8 @@ In order to yield intuitive interpretations, the loading matrix is sparsified ba
   \item{var.per}{the cumulative proportion of variance explained by the PCs.}
 }
 \references{
+Zhao, Lindquist and Caffo (2018). ``Sparse principal component based high-dimensional mediation analysis''. \emph{arXiv preprint} arXiv:1806.06118.
+
 Huang and Pan (2016). ``Hypothesis test of mediation effect in causal mediation model with high-dimensional continuous mediators''. \emph{Biometrics}, 72(2):402-413.
 
 Zou, Hastie and Tibshirani (2006). ``Sparse principal component analysis''. \emph{Journal of computational and graphical statistics}, 15(2):265-286.
